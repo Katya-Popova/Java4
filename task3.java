@@ -13,16 +13,21 @@ public class task3 {
         Integer result=0;
         while(true){
         Scanner y = new Scanner(System.in);
-        System.out.print("Введите оператор: ");
+        System.out.print("Введите оператор +, -, *, /, n-для отмены последний операции: ");
         String op = y.nextLine();
-        if (op.equals("n")) {
+        if (op.equals("n") & linklist.size()<2) {
+            System.out.println("Ошибка ввода" );
+        }
+        else if (op.equals("n")) {
             
             linklist.remove(linklist.size()-1);
             linklist.remove(linklist.size()-1);
             result = linklist.get(linklist.size()-1);
             System.out.println("Ответ " + result);
             continue;
-        }
+        
+           
+        }  
         Scanner z = new Scanner(System.in);
                
         System.out.print("Введите число: ");
